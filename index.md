@@ -219,5 +219,19 @@ description: Home Page
 
 ## About Me
 Hi, I'm Derek Kang. I'm currently 15 years old and a sophmore at DNHS, Class of 2027. My academic interests are math and science, particularly physics and chemistry. In my free time I like to play Brawl Stars and hang out with my friends. My hobbies include playing violin, playing tennis, biking, snowboarding, and robotics. I can speak chinese, as well as english. My favorite food is pasta.
-
 <img src="{{site.baseurl}}/images/Untitled presentation.png">
+
+<div>
+    <h>Join Del Norte SciOly!</h>
+</div>
+<div>
+    <button>Click Me!</button>
+</div>
+
+<div>
+    <a href="https://docs.google.com/presentation/d/1o15b7_oeV8J7zY2rmnInHFQiUcuF7D9J3HM5Up-jdFE/edit?usp=sharing">Interest Meeting Presentation</a>
+</div>
+<div>
+    <a href="https://forms.gle/xnwPbusonfWDk9za6">Register for the 2024-25 Season Here!</a>
+    <p>Registration will be closing on September 8th at 11:59 PM.</p>
+</div>
