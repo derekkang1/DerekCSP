@@ -4,6 +4,7 @@ title: Student Home
 image: /images/mario_animation.png
 hide: true
 description: Home Page
+menu: nav/index.html
 ---
 
 <!-- Liquid:  statements -->
@@ -219,6 +220,7 @@ description: Home Page
 
 ## About Me
 Hi, I'm Derek Kang. I'm currently 15 years old and a sophmore at DNHS, Class of 2027. My academic interests are math and science, particularly physics and chemistry. In my free time I like to play Brawl Stars and hang out with my friends. My hobbies include playing violin, playing tennis, biking, snowboarding, and robotics. I can speak chinese, as well as english. My favorite food is pasta.
+
 <img src="{{site.baseurl}}/images/Untitled presentation.png">
 <div>
     <button onclick="window.location.href='{{site.baseurl}}/miniproject/home';">My Gaming Blog!</button>
