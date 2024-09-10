@@ -225,14 +225,21 @@ Hi, I'm Derek Kang. I'm currently 15 years old and a sophmore at DNHS, Class of 
 <div>
     <button onclick="window.location.href='{{site.baseurl}}/miniproject/home';">My Gaming Blog!</button>
 </div>
+<br>
 
+<div>
+    <button onclick="window.location.href='{{site.baseurl}}/snakegame';">Snake Game!</button>
+</div>
+
+<br>
+<br>
+<br>
 <div>
     <h3>Join Del Norte SciOly!</h3>
 </div>
 <div>
-    <button>Click Me!</button>
+    <button onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');">Click Me!</button>
 </div>
-
 <div>
     <a href="https://docs.google.com/presentation/d/1o15b7_oeV8J7zY2rmnInHFQiUcuF7D9J3HM5Up-jdFE/edit?usp=sharing">Interest Meeting Presentation</a>
 </div>
