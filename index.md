@@ -225,7 +225,15 @@ Hi, I'm Derek Kang. I'm currently 15 years old and a sophmore at DNHS, Class of 
 <br>
 <div>
     <button onclick="window.location.href='{{site.baseurl}}/miniproject/home';">My Gaming Blog!</button>
+</div>
+<div>
     <button onclick="window.location.href='{{site.baseurl}}/snakegame';">Snake Game!</button>
+</div>
+<div>
+    <button onclick="window.location.href='{{site.baseurl}}/cookieclicker';">Cookie Clicker!</button>
+</div>
+<div>
+    <button onclick="window.location.href='{{site.baseurl}}/jscalc';">Calculator!</button>
 </div>
 <br>
 <br>
