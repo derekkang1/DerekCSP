@@ -215,14 +215,14 @@ menu: nav/index.html
 </script>
 
 
-# Welcome to my CSP blog page!
-
-
-## About Me
-Hi, I'm Derek Kang. I'm currently 15 years old and a sophmore at DNHS, Class of 2027. My academic interests are math and science, particularly physics and chemistry. In my free time I like to play Brawl Stars and hang out with my friends. My hobbies include playing violin, playing tennis, biking, snowboarding, and robotics. I can speak chinese, as well as english. My favorite food is pasta.
-
-<img src="{{site.baseurl}}/images/Untitled presentation.png">
+<img src="{{site.baseurl}}/images/welcome.png">
 <br>
+<h1>Check out my robotics team!</h1>
+<div>
+    <button onclick="window.open('https://cartrobotics.org/');">Visit the team website</button>
+</div>
+<br>
+<h2>Visit these cool parts of my blog!</h2>
 <div>
     <button onclick="window.location.href='{{site.baseurl}}/miniproject/home';">My Gaming Blog!</button>
 </div>

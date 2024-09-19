@@ -62,7 +62,6 @@ permalink: /cookieclicker
         font-size: 18px;
         margin: 10px;
     }
-
 </style>
 
 <audio id="pointSound" src="{{site.baseurl}}/audio/cookie.mp3" preload="auto"></audio>
@@ -91,7 +90,6 @@ permalink: /cookieclicker
     const autoClickerElement = document.getElementById("auto-clickers");
     const grandmaElement = document.getElementById("grandmas");
     const buyAutoClickerButton = document.getElementById("buy-auto-clicker");
-    const cursorPriceElement = document.getElementById("cursor-price");
     const buyGrandmaButton = document.getElementById("buy-grandma");
 
     function playPointSound() {
@@ -116,7 +114,6 @@ permalink: /cookieclicker
 
     // Function to update cursor price display
     function updateCursorPrice() {
-        cursorPriceElement.textContent = cursorPrice;
         buyAutoClickerButton.textContent = `Buy Cursor (${cursorPrice} cookies)`; // Update button text
     }
 

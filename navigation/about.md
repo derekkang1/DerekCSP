@@ -2,6 +2,8 @@
 layout: page
 title: About
 permalink: /about/
+comments: True
+layout: post
 ---
 
 ## About Me
