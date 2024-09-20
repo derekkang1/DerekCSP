@@ -76,103 +76,127 @@ permalink: /cookieclicker
         <div id="auto-clicker-info">Cursors: <span id="auto-clickers">0</span></div>
         <button id="buy-grandma">Buy Grandma (100 cookies)</button>
         <div id="grandma-info">Grandmas: <span id="grandmas">0</span></div>
+        <button id="buy-farm">Buy Farm (250 cookies)</button>
+        <div id="farm-info">Farms: <span id="farms">0</span></div>
     </div>
 </body>
 
 <script>
-    let cookieCount = 0;
-    let autoClickers = 0;
-    let grandmas = 0;
-    let cursorPrice = 15; // Initial price of the cursor
-    let grandmaPrice = 100; // Initial price of grandma
+let cookieCount = 0;
+let autoClickers = 0;
+let grandmas = 0;
+let farms = 0;
+let cursorPrice = 15;
+let grandmaPrice = 100; 
+let farmPrice = 250; // Make sure this matches your button price
 
-    const cookieCountElement = document.getElementById("cookie-count");
-    const autoClickerElement = document.getElementById("auto-clickers");
-    const grandmaElement = document.getElementById("grandmas");
-    const buyAutoClickerButton = document.getElementById("buy-auto-clicker");
-    const buyGrandmaButton = document.getElementById("buy-grandma");
+const cookieCountElement = document.getElementById("cookie-count");
+const autoClickerElement = document.getElementById("auto-clickers");
+const grandmaElement = document.getElementById("grandmas");
+const farmElement = document.getElementById("farms"); // Corrected to "farms"
+const buyAutoClickerButton = document.getElementById("buy-auto-clicker");
+const buyGrandmaButton = document.getElementById("buy-grandma");
+const buyFarmButton = document.getElementById("buy-farm");
 
-    function playPointSound() {
-        const pointSound = document.getElementById("pointSound");
-        pointSound.play();
-    }
+function playPointSound() {
+    const pointSound = document.getElementById("pointSound");
+    pointSound.play();
+}
+function updateCookieCount() {
+    cookieCountElement.textContent = cookieCount;
+}
+function updateAutoClickers() {
+    autoClickerElement.textContent = autoClickers;
+}
+function updateGrandmas() {
+    grandmaElement.textContent = grandmas;
+}
+function updateFarms() { // Define the function to update farms
+    farmElement.textContent = farms; // Use 'farms' variable
+}
+function updateCursorPrice() {
+    buyAutoClickerButton.textContent = `Buy Cursor (${cursorPrice} cookies)`; 
+}
+function updateGrandmaButton() {
+    buyGrandmaButton.textContent = `Buy Grandma (${grandmaPrice} cookies)`;
+}
+function updateFarmButton() {
+    buyFarmButton.textContent = `Buy Farm (${farmPrice} cookies)`;
+}
 
-    // Function to update cookie count display
-    function updateCookieCount() {
-        cookieCountElement.textContent = cookieCount;
-    }
-
-    // Function to update auto-clicker count display
-    function updateAutoClickers() {
-        autoClickerElement.textContent = autoClickers;
-    }
-
-    // Function to update grandma count display
-    function updateGrandmas() {
-        grandmaElement.textContent = grandmas;
-    }
-
-    // Function to update cursor price display
-    function updateCursorPrice() {
-        buyAutoClickerButton.textContent = `Buy Cursor (${cursorPrice} cookies)`; // Update button text
-    }
-
-    // Function to update grandma button text with price
-    function updateGrandmaButton() {
-        buyGrandmaButton.textContent = `Buy Grandma (${grandmaPrice} cookies)`;
-    }
-
-    // Cookie click event
-    document.getElementById("cookie").addEventListener("click", () => {
-        cookieCount++;
-        updateCookieCount();
-        playPointSound();
-    });
-
-    // Buy auto-clicker event
-    buyAutoClickerButton.addEventListener("click", () => {
-        if (cookieCount >= cursorPrice) {
-            cookieCount -= cursorPrice;
-            autoClickers++;
-            cursorPrice = Math.floor(cursorPrice * 1.5); // Increase price for next purchase
-            updateCookieCount();
-            updateAutoClickers();
-            updateCursorPrice(); // Update the displayed cursor price and button text
-        }
-    });
-
-    // Buy grandma event
-    buyGrandmaButton.addEventListener("click", () => {
-        if (cookieCount >= grandmaPrice) {
-            cookieCount -= grandmaPrice;
-            grandmas++;
-            grandmaPrice = Math.floor(grandmaPrice * 1.5); // Increase price for next purchase
-            updateCookieCount();
-            updateGrandmas();
-            updateGrandmaButton(); // Update the button text with the new price
-        }
-    });
-
-    // Auto-clicker functionality
-    setInterval(() => {
-        if (autoClickers > 0) {
-            cookieCount += autoClickers;
-            updateCookieCount();
-        }
-    }, 500);
-
-    // Grandma functionality: adds cookies every second
-    setInterval(() => {
-        if (grandmas > 0) {
-            cookieCount += 5 * grandmas; // 5 cookies per grandma
-            updateCookieCount();
-        }
-    }, 1000);
-
-    // Initial display
+// Cookie click event
+document.getElementById("cookie").addEventListener("click", () => {
+    cookieCount++;
     updateCookieCount();
-    updateAutoClickers();
-    updateGrandmas();
-    updateCursorPrice();
-    updateGrandmaButton(); // Initial update for grandma button
+    playPointSound();
+});
+
+// Buy auto-clicker event
+buyAutoClickerButton.addEventListener("click", () => {
+    if (cookieCount >= cursorPrice) {
+        cookieCount -= cursorPrice;
+        autoClickers++;
+        cursorPrice = Math.floor(cursorPrice * 1.5); // Increase price for next purchase
+        updateCookieCount();
+        updateAutoClickers();
+        updateCursorPrice(); // Update the displayed cursor price and button text
+    }
+});
+
+// Buy grandma event
+buyGrandmaButton.addEventListener("click", () => {
+    if (cookieCount >= grandmaPrice) {
+        cookieCount -= grandmaPrice;
+        grandmas++;
+        grandmaPrice = Math.floor(grandmaPrice * 1.5); // Increase price for next purchase
+        updateCookieCount();
+        updateGrandmas();
+        updateGrandmaButton(); // Update the button text with the new price
+    }
+});
+
+// Buy farm event
+buyFarmButton.addEventListener("click", () => {
+    if (cookieCount >= farmPrice) {
+        cookieCount -= farmPrice;
+        farms++;
+        farmPrice = Math.floor(farmPrice * 1.5); // Increase price for next purchase
+        updateCookieCount();
+        updateFarms(); // Call the newly defined function
+        updateFarmButton(); // Update the button text with the new price
+    }
+});
+
+// Auto-clicker functionality
+setInterval(() => {
+    if (autoClickers > 0) {
+        cookieCount += autoClickers;
+        updateCookieCount();
+    }
+}, 500);
+
+// Grandma functionality: adds cookies every second
+setInterval(() => {
+    if (grandmas > 0) {
+        cookieCount += 5 * grandmas; // 5 cookies per grandma
+        updateCookieCount();
+    }
+}, 1000);
+
+// Farm functionality: adds cookies every second
+setInterval(() => {
+    if (farms > 0) {
+        cookieCount += 10 * farms; // 10 cookies per farm
+        updateCookieCount();
+    }
+}, 1000);
+
+// Initial display
+updateCookieCount();
+updateAutoClickers();
+updateGrandmas();
+updateFarms(); // Call the function to update farms
+updateCursorPrice();
+updateGrandmaButton();
+updateFarmButton(); // Initial update for farm button
 </script>
