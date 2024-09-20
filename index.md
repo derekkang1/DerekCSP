@@ -27,6 +27,15 @@ menu: nav/index.html
 
   /*CSS style rules for the id and class of the sprite...
   */
+  body {
+    text-align: center;
+  }
+  .container {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; /* Center items horizontally */
+    margin: 0 auto;
+  }
   .sprite {
     height: {{pixels}}px;
     width: {{pixels}}px;
@@ -211,43 +220,48 @@ menu: nav/index.html
     sprite.style.transform = `scale(${0.2 * scale})`;
     mario.startResting();
   });
-
 </script>
 
 
-<img src="{{site.baseurl}}/images/welcome.png">
-<br>
-<h1>Check out my robotics team!</h1>
-<div>
-    <button onclick="window.open('https://cartrobotics.org/');">Visit the team website</button>
-</div>
-<br>
-<h2>Visit these cool parts of my blog!</h2>
-<div>
-    <button onclick="window.location.href='{{site.baseurl}}/miniproject/home';">My Gaming Blog!</button>
-</div>
-<div>
-    <button onclick="window.location.href='{{site.baseurl}}/snakegame';">Snake Game!</button>
-</div>
-<div>
-    <button onclick="window.location.href='{{site.baseurl}}/cookieclicker';">Cookie Clicker!</button>
-</div>
-<div>
-    <button onclick="window.location.href='{{site.baseurl}}/jscalc';">Calculator!</button>
-</div>
-<br>
-<br>
-<br>
-<div>
-    <h3>Join Del Norte SciOly!</h3>
-</div>
-<div>
-    <button onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');">Click Me!</button>
-</div>
-<div>
-    <a href="https://docs.google.com/presentation/d/1o15b7_oeV8J7zY2rmnInHFQiUcuF7D9J3HM5Up-jdFE/edit?usp=sharing">Interest Meeting Presentation</a>
-</div>
-<div>
-    <a href="https://forms.gle/xnwPbusonfWDk9za6">Register for the 2024-25 Season Here!</a>
-    <p>Registration will be closing on September 8th at 11:59 PM.</p>
+<div class="container">
+    <img src="{{site.baseurl}}/images/welcome.png">
+    <br>
+    <h1>Visit these cool parts of my blog!</h1>
+    <div>
+        <button onclick="window.location.href='{{site.baseurl}}/miniproject/home';">My Gaming Blog!</button>
+    </div>
+    <div>
+        <button onclick="window.location.href='{{site.baseurl}}/snakegame';">Snake Game!</button>
+    </div>
+    <div>
+        <button onclick="window.location.href='{{site.baseurl}}/cookieclicker';">Cookie Clicker!</button>
+    </div>
+    <div>
+        <button onclick="window.location.href='{{site.baseurl}}/jscalc';">Calculator!</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <img src="{{site.baseurl}}/images/cartlogo.png" width="180" height="92" />
+    <h3>Check out my robotics team!</h3>
+    <img src="{{site.baseurl}}/images/cart_robot.png" width="490" height="390" />
+    <div>
+        <button onclick="window.open('https://cartrobotics.org/');">Visit the team website</button>
+    </div>
+    <br>
+    <br>
+    <div>
+        <h3>Join Del Norte SciOly!</h3>
+        <img src="{{site.baseurl}}/images/dnscioly.png" width="100" height="100" />
+    </div>
+    <div>
+        <button onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');">Click Me!</button>
+    </div>
+    <div>
+        <a href="https://docs.google.com/presentation/d/1o15b7_oeV8J7zY2rmnInHFQiUcuF7D9J3HM5Up-jdFE/edit?usp=sharing">Interest Meeting Presentation</a>
+    </div>
+    <div>
+        <a href="https://forms.gle/xnwPbusonfWDk9za6">Register for the 2024-25 Season Here!</a>
+        <p>Registration will be closing on September 8th at 11:59 PM.</p>
+    </div>
 </div>
